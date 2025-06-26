@@ -14,7 +14,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<BookList />} />
-          <Route path="/add" element={<AddBookPage />} />
+          <Route path="/insert" element={<BookForm />} />
         </Routes>
       </Router>
     </>
