@@ -6,7 +6,7 @@ RUN npm install
 COPY . .
 RUN npm run build
 # 실행 단계
-FROM node:16
+FROM node:18
 WORKDIR /app
 COPY --from=build /app/dist /app/dist
 RUN npm install express
