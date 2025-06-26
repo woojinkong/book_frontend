@@ -4,10 +4,10 @@ import axios from "axios";
 const BookForm = () => {
   const [form, setForm] = useState({
     no: "",
-    title: "",
     price: "",
-    qty: "",
     publisher: "",
+    qty: "",
+    title: "",
   });
 
   const handleChange = (e) => {
