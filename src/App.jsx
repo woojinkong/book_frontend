@@ -1,22 +1,23 @@
 import { useState } from "react";
 import "./App.css";
 import BookList from "./tags/BookList";
-import { Routes, Router, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom"; // ✅ 수정
 import Header from "./tags/Header";
 import BookForm from "./tags/BookForm";
+
 function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <>
-      <Router>
-        <Header />
-        <Routes>
-          <Route path="/" element={<BookList />} />
-          <Route path="/insert" element={<BookForm />} />
-        </Routes>
-      </Router>
-    </>
+    <BrowserRouter>
+      {" "}
+      {/* ✅ 여기 수정 */}
+      <Header />
+      <Routes>
+        <Route path="/" element={<BookList />} />
+        <Route path="/insert" element={<BookForm />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
